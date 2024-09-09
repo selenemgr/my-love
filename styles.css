@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(255, 177, 177);
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .image-container {
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #main-image {
+    width: 500px;
+    height: auto;
+  }
+
+  #img-carousel {
+    width: 100%;
+    height: 100%;
+  }
+
+  #page-title {
+    font-size: 24px;
+    margin: 20px 0;
+    width: 800px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+  }
+
+  button:hover {
+    background-color: rgb(255, 103, 103);
+  }
+  
+  #no-button.moving {
+    position: absolute;
+    transition: top 0.3s, left 0.3s;
+  }
+  
+  body.show-hearts {
+    background-image: url('Public/hearts.gif'); /* Replace with the actual URL of your hearts GIF */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+/* Carousel styling */
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 500px; /* Set a fixed height for the carousel */
+  overflow: hidden;
+  position: relative;
+  border-radius: 10PX;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel img.active {
+  display: block;
+  opacity: 1;
+}
+  
